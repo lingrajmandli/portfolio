@@ -1,0 +1,477 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap'); */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 1rem;
+    background-color: #FBEAEB;
+    color: #2F3C7E;
+    /* font-family: Parkinsans; */
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.img-fluid {
+    width: 300px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures space between brand and links */
+    align-items: center; /* Vertically aligns items */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2F3C7E;
+    padding: 10px 40px; /* Add some horizontal padding for spacing */
+    color: #FBEAEB;
+    z-index: 1000;
+}
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #FBEAEB;
+    cursor: pointer;
+    position: absolute; /* Position it properly */
+    top: 50%; /* Center vertically */
+    right: 20px; /* Place it on the far right */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    z-index: 1100; /* Ensure it stays above other elements */
+
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #FBEAEB;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: color 0.3s ease;
+    text-transform: uppercase; /* Optional: Makes the text uppercase */
+    cursor: pointer; /* Makes the brand look clickable */
+}
+
+/* Hover Effect for Navbar Brand */
+.navbar-brand:hover {
+    color: aqua; /* Changes color when hovered */
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Links - Individual Items */
+.nav-item a {
+    font-size: 1rem;
+    color: #FBEAEB;
+    text-decoration: none;
+    padding: 8px 12px; /* Adds spacing around links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect for Navbar Links */
+.nav-item a:hover {
+    color: aqua; /* Changes color on hover */
+    transform: scale(1.1); /* Slightly enlarges the link */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks brand and links */
+        align-items: flex-start; /* Aligns items to the left */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .nav-links {
+        display: none; /* Hides links by default */
+        flex-direction: column; /* Stacks links vertically */
+        gap: 10px;
+        width: 100%;
+        width: 100%; /* Makes links take full width */
+        background: #2F3C7E;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        display: flex; /* Shows links when active */
+    }
+
+    .hamburger-menu {
+        display: block; /* Shows hamburger menu */
+    }
+}
+
+/* Optional Underline Effect for Links */
+.nav-item a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+}
+
+.nav-item a:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FBEAEB;
+    position: relative;
+}
+
+.hero-banner{
+    top: 0;
+    left: 0;
+    max-width: 450px;
+    width: 100%; 
+    height: 100%;
+    margin-top: 15px;
+    z-index: 1;
+}
+.hero-heading{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.hero-heading h2{
+    font-size:3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.hero-heading h2:hover{
+    transform: scale(1.2);
+    color: #2F3C7E;
+}
+.hero-content{
+    max-width: 450px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 30%;
+    left: 66%;
+    transform: translate(-50%);
+}
+.social-links a{
+    color: #2F3C7E;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #2F3C7E;
+}
+
+.btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #00246B;
+    color: #00246B;
+    background: transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.btn:hover{
+    background-color: #00246B;
+    color: #FBEAEB;
+}
+.btn::after{
+    background-color: #FBEAEB;
+    color: #00246B;
+    border: 2px solid#00246B;
+}
+/* about */
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #FBEAEB;
+}
+.about h2{
+    font-size: 2.5rem;
+}
+.about p{
+    font-size: 1rem;
+}
+.about-section img {
+    width: 200px; /* Adjust image size if necessary */
+    border-radius: 10px;
+    margin-right: 20px;
+}
+/* programing skills */
+.Programming{
+    margin-top: 25vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBEAEB;
+}
+.Programming h2{
+    font-size: 2.5rem;
+}
+
+/* projects */
+.projects{
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    background-color: #FBEAEB;
+}
+
+.skills-section {
+    padding: 20px;
+    background-color: #FBEAEB;
+}
+.skills-section h2{
+    font-size: 2.5rem;
+    color: #2F3C7E;
+}
+
+.skill-icons .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F3C7E;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+
+.skill-icons .icon img {
+    max-width: 70%; /* Control the image size relative to the icon box */
+}
+
+
+.skill-icons .icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+}
+
+/* academic */
+.academic {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: auto;
+    padding: 10px;
+    background-color: #FBEAEB;
+    font-weight: bold;
+}
+
+.academic h2 {
+    font-size: 2.5rem;
+    color: #2F3C7E;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: center;
+    
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.card-body {
+    text-align: center;
+    background-color:#2F3C7E ;
+    color: #FBEAEB;
+    padding: 20px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #FBEAEB;
+    margin: 5px 0;
+}
+
+
+/* contact section */
+.contact-section {
+    text-align: center;
+    margin: 25vh auto;
+    padding: 10px;
+    max-width: 600px;     
+}
+
+.contact-section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    /* font-size: 1.1em; */
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-section i {
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+.contact-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.email-link,
+.phone-link {
+    text-decoration: none;   
+    color: #007BFF;         
+    font-weight: bold;
+}
+
+.email-link:hover,
+.phone-link:hover {
+    color: #0056b3;          
+    text-decoration: underline;
+}
+
+.footer p{
+    background-color: #00246B;
+}
+
+/* social */
+.fa {
+    background-color: #FBEAEB;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: #00246B;
+    border-radius: 25px;
+    background: transparent;
+
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: #00246B;
+    border-radius: 25px;
+    border: #f9f9f9;
+    color: 25px solid #f9f9f9;
+    background: transparent;
+  }
+   footer {
+    background: #2F3C7E;
+    color: #FBEAEB;
+    padding: 15px 0 5px 0;
+    font-size: 1.5em;
+   }
+
+   .ftr{
+    color: crimson;
+   }
+
+   /* Media Queries for Larger Devices */
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section img {
+        width: 200px;
+    }
+
+    .navbar-brand {
+        font-size: 2rem;
+    }
+    .nav-item a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .about {
+        padding: 30px;
+    }
+    .skill-icons .icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+/* Desktop Specific Adjustments */
+@media (min-width: 1024px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .about {
+        padding: 50px 100px;
+    }
+    .contact-section {
+        max-width: 800px;
+    }
+}
+
+
+   
